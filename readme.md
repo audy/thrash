@@ -1,4 +1,4 @@
-# thrash
+# 🔥 Thrash
 
 Randomly write to many, many files. Inspired by desperation.
 
