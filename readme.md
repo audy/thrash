@@ -7,7 +7,7 @@ Randomly write to many, many files. Inspired by desperation.
 thrasher = Thrash.new
 
 1_000_000.times do |x|
-  thrasher["thrash-#{(0..10000).to_a.sample}].write ">:|\n"
+  thrasher["thrash-#{(0..10000).to_a.sample}"].write ">:|\n"
 end
 
 thrasher.finalize
