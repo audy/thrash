@@ -6,10 +6,16 @@ class Thrash
     create_buffer!
   end
 
+  # add object to bucket
+  # check if bucket is full and if it is
+  # write out and flush
   def add(bucket, obj)
     @buffer[bucket] << obj
     check_and_write bucket
   end
+
+  # I'm not sure which one to use
+  alias :write :add
 
   # write and flush remaining buckets
   def finalize
@@ -22,6 +28,8 @@ class Thrash
 
   private
 
+  # instantiates a new buffer which for now is
+  # just a hash
   def create_buffer!
     @buffer = Hash.new { |h, k| h[k] = Array.new }
   end
