@@ -11,7 +11,6 @@ thrasher = Thrash.new
 end
 
 thrasher.finalize
-
 ```
 
 ## Copyright
