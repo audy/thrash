@@ -6,8 +6,11 @@ Randomly write to many, many files. Inspired by desperation.
 
 thrasher = Thrash.new
 
+random_numbers = (0..10_000).to_a
+
 1_000_000.times do |x|
-  thrasher.write "thrash-#{(0..10000).to_a.sample}",  ">:|\n"
+  filename = "thrash-#{random_numbers.sample}"
+  thrasher.write(filename, "data")
 end
 
 thrasher.finalize
