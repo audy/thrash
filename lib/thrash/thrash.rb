@@ -55,6 +55,7 @@ class Thrash
         o.write(v)
       end
     end
+    clear_buffer!
   end
 
   # empty the buffer
